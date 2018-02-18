@@ -3,6 +3,7 @@ package com.files.files.controller;
 import com.files.files.model.AjaxResponse;
 import com.files.files.model.File;
 import com.files.files.service.FileService;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+
 /**
  * Created with IntelliJ IDEA.
  * User: Nerses
@@ -23,6 +25,8 @@ import java.nio.file.Paths;
  */
 @RestController
 public class FileRestController {
+
+    private static final Logger logger = org.apache.log4j.Logger.getLogger(FileRestController.class);
 
     private final static String UPLOADED_FOLDER = "/home/nerses/tmp/";
 
